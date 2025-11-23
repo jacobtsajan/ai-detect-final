@@ -38,6 +38,6 @@ def index():
     # The message variable is now guaranteed to have a value.
     return render_template('main.html', params = message)
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
     # Use debug=True for development, turn it off in production.
-    #app.run(host="172.18.120.65",debug=True)
+    app.run(host="127.0.0.1",debug=True)
