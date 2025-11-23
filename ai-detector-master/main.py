@@ -39,5 +39,6 @@ def index():
     return render_template('main.html', params = message)
 
 if __name__ == '__main__':
-    # Use debug=True for development, turn it off in production.
-    app.run(host="127.0.0.1",debug=True)
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
